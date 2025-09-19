@@ -1,3 +1,73 @@
+:root {
+  --blue: #00acdc;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
 body {
   margin: 0;
+  font-size: 12px;
+}
+
+header {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.logo {
+  padding-left: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  line-height: 60px;
+  margin-left: auto;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  line-height: 60px;
+  color: #000;
+  text-decoration: none;
+  justify-content: flex-end;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.lapComp a:hover {
+  color: var(--blue);
+}
+
+.is-active {
+  position: relative;
+  color: var(--blue);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 8px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
